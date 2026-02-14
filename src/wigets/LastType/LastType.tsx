@@ -19,16 +19,16 @@ export const LastType = () => {
                         что я рядом, чтобы поддержать тебя во всем.
                         Люблю тебя! {`<3`}
                     </div>
+                </div>
+            </div>
+            <div className={styles.blob}></div>
+        </div>
                     <div className={styles.divider}>
                         <AutoSlider/>
                         <div className={styles.text3}>
                             💖
                         </div>
                     </div>
-                </div>
-            </div>
-            <div className={styles.blob}></div>
-        </div>
         
     </div>
   )
