@@ -1,0 +1,88 @@
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1); // нормальный размер
+  }
+  25% {
+    transform: scale(1); // немного больше
+  }
+  50% {
+    transform: scale(1.02); // пиковый размер
+  }
+  75% {
+    transform: scale(1); // возвращаемся к небольшому увеличению
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    max-width: 300px;
+    height: auto;
+    img{
+      max-width: 300px;
+      height: auto;
+    }
+}
+}
+@media (max-width: 430px) {
+  .card {
+    max-width: 200px;
+    height: auto;
+    img{
+      max-width: 200px;
+      height: auto;
+    }
+  }
+  .text{
+      text-align: center;
+      font-size: 10px; 
+      
+  }
+  .minitext{
+    font-size: 12px;
+  }
+}
+
+
+.FirstType{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    button{
+        animation: heartbeat 1s infinite;
+        transition: all 0.3s ease;
+        position: relative;
+        
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 50px;
+
+          background: #e89c4f;
+          color: white;
+          border-radius: 20px;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s ease;
+        }
+
+  &:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+    }
+    .text{
+        text-align: center;
+        font-size: 30px; 
+        
+    }
+     
+}
