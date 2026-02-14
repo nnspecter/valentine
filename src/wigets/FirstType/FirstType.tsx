@@ -13,6 +13,7 @@ const FirstType = () => {
 
   const handleClick = () => {
     if (clickCount >= 999) {
+      
       setPage(2);
     } else if (clickCount < 999) {
       setClickCount(prev => prev + 1);
